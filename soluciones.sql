@@ -14,9 +14,9 @@
 --Auriculares BT Pro / Hub USB-C 7p / Laptop Basic 14 / Laptop Pro 15 / Monitor 4K 27" / Mouse Inalámbrico / Parlante Bluetooth /
 --SSD Externo 1TB / Teclado Mecánico / Webcam HD 1080p
 
-SELECT DISTINCT nombre_producto FROM inventario_sucursal_norte
+SELECT * FROM inventario_sucursal_norte
 UNION
-SELECT DISTINCT nombre_producto FROM inventario_sucursal_sur
+SELECT * FROM inventario_sucursal_sur
 
 
 -- ── CONSULTA 2: UNION ALL ────────────────
@@ -37,9 +37,6 @@ FROM (
 -- ── CONSULTA 3: COMPARACIÓN DE RESULTADOS ─
 -- Ejecutá estas dos consultas para comparar cuántas filas
 -- devuelve cada operador y explicá la diferencia en tu README
-
-SELECT COUNT(*) AS filas_union     FROM (/* tu UNION aquí */)     AS resultado_union;
-SELECT COUNT(*) AS filas_union_all FROM (/* tu UNION ALL aquí */) AS resultado_union_all;
 
 -- Este operador devuelve 14 filas
 SELECT COUNT(*) AS filas_union     
